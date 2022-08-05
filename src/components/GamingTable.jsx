@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import {deckOfCards} from "../utills/deckOfCards";
-import {Container, Row} from "react-bootstrap";
+import {Button, Container, Row} from "react-bootstrap";
 import PlayerCards from "./PlayerCards";
 
 const GamingTable = () => {
@@ -21,6 +21,7 @@ const GamingTable = () => {
                     <PlayerCards title="Player 1"/>
                     <PlayerCards title='Player 2'/>
                 </Row>
+                <Button className="my-4">Draw</Button>
             </Container>
         </div>
     );
