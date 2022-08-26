@@ -1,13 +1,11 @@
 import PropTypes from 'prop-types';
-import {Card, Col} from "react-bootstrap";
-import {deckOfCards} from "../utills/deckOfCards";
-import React from 'react';
-import {drawCard} from "../utills/drawCard";
-import Cards from "./Cards";
+import {Button, Card, Col, Container} from "react-bootstrap";
+import React, {useState} from 'react';
+import GameCard from "./GameCard";
 
 const PlayerCards = (player) => {
 
-    const drawCards = (n) => {
+    /*const drawCards = (n) => {
         const drawnCards = []
         for (let i = 0; i < n && deckOfCards.length > 0; i++) {
             drawnCards.push(drawCard())
@@ -29,7 +27,7 @@ const PlayerCards = (player) => {
 
 PlayerCards.propTypes = {
     title: PropTypes.string,
-
+    getCards: PropTypes.func
 };
 
 export default PlayerCards;
