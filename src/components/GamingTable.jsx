@@ -5,13 +5,23 @@ import PlayerCards from "./PlayerCards";
 
 const GamingTable = () => {
 
-    const log = useRef(true)
+    const [deck, setDeck] = useState(shuffleCards(deckOfCards))
+
+    const getCards = (count) => {
+        const newDeck = [...deck]
+        const playerCards = newDeck.splice(0,count)
+        setDeck(newDeck)
+        console.log(playerCards)
+        return playerCards
+    }
+
+    /*const log = useRef(true)
     useEffect(() => {
         if(log.current){
-            log.current = false
-            console.log(deckOfCards)
+            log.current = false/!*
+            console.log(deckOfCards)*!/
         }
-    }, [])
+    }, [])*/
 
     return (
         <div className='text-center'>
@@ -21,7 +31,8 @@ const GamingTable = () => {
                     <PlayerCards title="Player 1"/>
                     <PlayerCards title='Player 2'/>
                 </Row>
-                <Button className="my-4">Draw</Button>
+                {/*<Button onClick={() => setHand([...myHand, ...getCards(5)])}>Hand out</Button>
+                <Button className="my-4">Draw</Button>*/}
             </Container>
         </div>
     );
