@@ -15,14 +15,6 @@ const GamingTable = () => {
         return playerCards
     }
 
-    /*const log = useRef(true)
-    useEffect(() => {
-        if(log.current){
-            log.current = false/!*
-            console.log(deckOfCards)*!/
-        }
-    }, [])*/
-
     return (
         <div className='text-center'>
             <Container className="my-5">
@@ -31,8 +23,6 @@ const GamingTable = () => {
                     <PlayerCards title="Player 1"/>
                     <PlayerCards title='Player 2'/>
                 </Row>
-                {/*<Button onClick={() => setHand([...myHand, ...getCards(5)])}>Hand out</Button>
-                <Button className="my-4">Draw</Button>*/}
             </Container>
         </div>
     );
