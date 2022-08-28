@@ -3,7 +3,7 @@ import {Button, Card, Col, Container} from "react-bootstrap";
 import React, {useState} from 'react';
 import GameCard from "./GameCard";
 
-const PlayerCards = (player) => {
+const PlayerCards = React.forwardRef((player, ref) => {
 
     /*const drawCards = (n) => {
         const drawnCards = []
@@ -12,6 +12,12 @@ const PlayerCards = (player) => {
         }
         return drawnCards
     }
+
+    React.useImperativeHandle(ref, () =>({
+        newGame
+    }))
+
+    console.log(myHand)
 
     return (
         <Col className="col-6 d-flex justify-content-center">
@@ -23,7 +29,7 @@ const PlayerCards = (player) => {
             </Card>
         </Col>
     );
-};
+});
 
 PlayerCards.propTypes = {
     title: PropTypes.string,
