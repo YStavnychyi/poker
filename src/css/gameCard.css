@@ -1,0 +1,10 @@
+.red-card{
+    color: red;
+    border: 1px solid red;
+}
+
+.back-of-card{
+    color: white;
+    border: 1px solid black;
+    height: 6rem;
+}

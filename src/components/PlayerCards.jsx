@@ -13,11 +13,9 @@ const PlayerCards = React.forwardRef((player, ref) => {
         return drawnCards
     }
 
-    React.useImperativeHandle(ref, () =>({
+    React.useImperativeHandle(ref, () => ({
         newGame
     }))
-
-    console.log(myHand)
 
     return (
         <Col className="col-6 d-flex justify-content-center">
