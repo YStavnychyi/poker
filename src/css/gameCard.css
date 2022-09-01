@@ -8,3 +8,8 @@
     border: 1px solid black;
     height: 6rem;
 }
+
+.choose-card{
+    border: 1px solid gray;
+    box-shadow: 0 0 2px 3px #aaa
+}
